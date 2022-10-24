@@ -1,0 +1,97 @@
+.social-media {
+    display: inline-flex;
+    list-style: none;
+    margin-top: 30%;
+    margin-left: -20%;
+    background: transparent;
+}
+.social-media .icon{
+    position: relative;
+    background: transparent;
+    border-radius: 50%;
+    padding: 15px;
+    margin-top: 0;
+    margin-left: 3%;
+    width: 20px;
+    height: 20px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow:0 10px 18px rgba(218, 64, 64, 0.1);
+    cursor: pointer;
+    transition: all 0.25 cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.social-media .icon a{
+    color:  #0b043b;
+}
+.bi{
+    color: black;
+}
+.social-media .application{
+    position: absolute;
+    top: 0;
+    font-size: 12px;
+    background: transparent;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.social-media .application::before {
+    position: absolute;
+    content:"";
+    height: 8px;
+    width: 8px;
+    background: transparent;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 8.35 cubic-bezier(0.68,
+    -0.55, 0.265, 1.55);
+}
+.social-media .icon:hover .application{
+    top: -25px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+.social-media .icon:hover span,
+.social-media .icon:hover .application {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+    
+.social-media .facebook:hover,
+.social-media .facebook:hover .application,
+.social-media .facebook:hover .application::before {
+    background: #1DA1F2;
+    color: #ffffff;
+}
+.social-media .twitter:hover,
+.social-media .twitter:hover .application,
+.social-media .twitter:hover .application::before{
+    background: blue;
+    color: #ffffff;
+}
+.social-media .instagram:hover,
+.social-media .instagram:hover .application,
+.social-media .instagram:hover .application::before{
+    background: red;
+    color: #ffffff;
+}
+.social-media .telegram:hover,
+.social-media .telegram:hover .application,
+.social-media .telegram:hover .application::before {
+    background: rgb(136, 214, 126);
+    color: #ffffff;
+}
+.social-media .youtube:hover,
+.social-media .youtube:hover .application,
+.social-media .youtube:hover .application::before{
+    background: rgb(224, 137, 56);
+    color: #ffffff;
+}
